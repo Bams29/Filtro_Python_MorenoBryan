@@ -21,7 +21,6 @@ def agregar_cliente():
         "direccion": input("Ingrese la dirección del cliente: "),
         "telefono": input("Ingrese el teléfono celular del cliente: "),
         "estrato": input("Ingrese el estrato del cliente: "),
-        "riesgo": input("Ingrese el riesgo del cliente: "),
         "tiempo_afiliado":0,
         "categoria":"cliente nuevo",
         "historial_servicios":{},
@@ -31,7 +30,20 @@ def agregar_cliente():
     clientes.append(nuevo_cliente)
     guardar_datos(clientes)
     
+def editar_estudiante(Ti_estudiante, nueva_informacion):
+    estudiantes = cargar_datos()
+    for estudiante in estudiantes:
+        if estudiante["Ti"] == Ti_estudiante:
+            estudiante.update(nueva_informacion)
+            guardar_datos(estudiantes)
+            print(f"Información del estudiante con TI {Ti_estudiante} actualizada correctamente.")
+            return
+        
+#----------------actualizar-----------
+opcion = input("\nSeleccione una opción (1-14): ")
 
+if opcion == "1":
+    agregar_cliente()
 
 
 
