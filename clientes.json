@@ -1,33 +1,8 @@
-[
-    {
-        "nombre": "pedro",
-        "apellido": "molina",
-        "edad": 23,
-        "dni": 1102345678,
-        "telefono": 3152345678,
-        "direccion": "cra #12 cll#13",
-        "estrato": "2",
-        "a\u00f1os afiliado": 1,
-        "categoria": "cliente regular",
-        "historial de servisios": {
-            "01-02-23": "fibra optica",
-            "02-04-22": "plan de 7000"
-        },
-        "reportes": {
-            "01-02-22": "no me quiso funcionar el plan de datos"
-        }
-    },
-    {
-        "nombre": "",
-        "apellido": "",
-        "edad": 0,
-        "dni": 0,
-        "telefono": 0,
-        "direccion": 0,
-        "estrato": 0,
-        "a\u00f1os afiliado": 0,
-        "categoria": "cliente nuevo",
-        "historial de servisios": {},
-        "reportes": {}
-    }
-]
+{
+    "nombre": "dd",
+    "apellido": "dd",
+    "edad": "dd",
+    "dni": "dd",
+    "telefono": "dd",
+    "direccion": "dd"
+}

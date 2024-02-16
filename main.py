@@ -15,7 +15,7 @@ direccion = input("ingrese la direccion del nuevo cliente: ")
 estrato = input("ingresa el estrato del nuevo cliente: ")
 
 
-nuevo_cliencte = {
+nuevo_cliente = {
     'nombre': name,
     'apellido': apellido,
     'edad': edad,
@@ -23,8 +23,10 @@ nuevo_cliencte = {
     'telefono': telefono,
     'direccion':direccion }
 
+clientes['nuevo'] = nuevo_cliente
+
 with open("clientes.json", "w") as file:
-    json.dump(clientes, file, indent=4)
+    json.dump(nuevo_cliente, file, indent=4)
 
 
 #----------nuevo cliente------
