@@ -40,6 +40,18 @@ def editar_cliente(dni_cliente, nueva_informacion):
             print(f"Información del cliente con dni {dni_cliente} actualizada correctamente.")
             return
         
+
+#----------------borrar--------------
+def eliminar_estudiante(dni_cliente):
+    clientes = cargar_datos()
+    for clientes in clientes[:]:
+        if clientes["dni"] == dni_cliente:
+            clientes.remove(clientes)
+            guardar_datos(clientes)
+            print(f"Estudiante con TI {dni_cliente} eliminado correctamente.")
+            return
+    else:
+        print(f"cliente con dni {dni_cliente} no encontrado.")
 #--------------Menu-------------------
         
 print("1. añadir un nuevo cliente")
