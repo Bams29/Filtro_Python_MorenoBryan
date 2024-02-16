@@ -29,7 +29,8 @@ def agregar_cliente():
     clientes = cargar_datos()
     clientes.append(nuevo_cliente)
     guardar_datos(clientes)
-    
+
+#----------------actualizar-----------    
 def editar_cliente(dni_cliente, nueva_informacion):
     clientes = cargar_datos()
     for clientes in clientes:
@@ -39,7 +40,10 @@ def editar_cliente(dni_cliente, nueva_informacion):
             print(f"Información del cliente con dni {dni_cliente} actualizada correctamente.")
             return
         
-#----------------actualizar-----------
+#--------------Menu-------------------
+        
+print("1. añadir un nuevo cliente")
+print("2. actualizar un cliente")
 opcion = input("\nSeleccione una opción (1-14): ")
 
 if opcion == "1":
@@ -52,12 +56,14 @@ elif opcion == "2":
                 "direccion": input("Ingrese la nueva dirección del cliente: "),
                 "telefono": input("Ingrese el nuevo teléfono celular del cliente: "),
                 "estrato": input("Ingrese el nuevo estrato del cliente: "),
-                "estado": input("Ingrese el nuevo estado del cliente: "),
-                "riesgo": input("Ingrese el nuevo riesgo del estudiante: ")
+                "tiempo_afiliado": 0,
+                "categoria": "cliente nuevo",
+                "historial_servicios": {},
+                "reportes": {}
             }
 
 
 
 
-#--------------Menu-------------------
+
 
