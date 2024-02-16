@@ -1,28 +1,35 @@
 import json
 
 
-with open("clientes.json", "r") as file:
-    clientes = json.load(file)
-    
-nuevo_cliente = {}
+def cargar_datos():
+    try:
+        with open("clientes.json", "r", encoding="utf-8") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return []
 
-name = input("ingrese el nombre del nuevo cliente: ")
-apellido = input("ingrese el apellido del nuevo cliente: ")
-edad = input("ingrese la edad del nuevo usuario: ")
-dni = input("ingresa el nuemero de identificacion del usuario: ")
-telefono = input("ingrese el telefono del nuevo cliente: ")
-direccion = input("ingrese la direccion del nuevo cliente: ")
-estrato = input("ingresa el estrato del nuevo cliente: ")
-
-
-
-with open("clientes.json", "w") as file:
-    json.dump(nuevo_cliente, file, indent=4)
-
-
+def guardar_datos(datos):
+    with open("clientes.json", "w", encoding="utf-8") as file:
+        json.dump(datos, file, indent=2, ensure_ascii=False)
 #----------nuevo cliente------
 
-
+def agregar_cliente():
+    nuevo_cliente = {
+        "dni": input("Ingrese el número de Identificación del cliente: "),
+        "nombres": input("Ingrese el nombre del cliente: "),
+        "apellidos": input("Ingrese los apellidos del cliente: "),
+        "direccion": input("Ingrese la dirección del cliente: "),
+        "telefono": input("Ingrese el teléfono celular del cliente: "),
+        "estrato": input("Ingrese el estrato del cliente: "),
+        "riesgo": input("Ingrese el riesgo del cliente: "),
+        "tiempo_afiliado":0,
+        "categoria":"cliente nuevo",
+        "historial_servicios":{},
+        "reportes":{}
+    }
+    clientes = cargar_datos()
+    clientes.append(nuevo_cliente)
+    guardar_datos(clientes)
     
 
 

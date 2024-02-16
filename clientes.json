@@ -7,9 +7,9 @@
         "telefono": 3152345678,
         "direccion": "cra #12 cll#13",
         "estrato": "2",
-        "tiempo afiliado": 1,
+        "tiempo_afiliado": 1,
         "categoria": "cliente regular",
-        "historial de servisios": {
+        "historial_servicios": {
             "01-02-23": "fibra optica",
             "02-04-22": "plan de 7000"
         },
@@ -25,7 +25,7 @@
         "telefono": 0,
         "direccion": 0,
         "estrato": 0,
-        "tiempo afiliado": 0,
+        "tiempo_afiliado": 0,
         "categoria": "cliente nuevo",
         "historial de servisios": {},
         "reportes": {}
