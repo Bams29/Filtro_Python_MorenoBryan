@@ -42,7 +42,7 @@ def editar_cliente(dni_cliente, nueva_informacion):
         
 
 #----------------borrar--------------
-def eliminar_estudiante(dni_cliente):
+def eliminar_cliente(dni_cliente):
     clientes = cargar_datos()
     for clientes in clientes[:]:
         if clientes["dni"] == dni_cliente:
@@ -73,7 +73,9 @@ elif opcion == "2":
                 "historial_servicios": {},
                 "reportes": {}
             }
-
+elif opcion == "3":
+            dni_cliente = input("Ingrese el TI del estudiante que desea eliminar: ")
+            eliminar_cliente(dni_cliente)
 
 
 
