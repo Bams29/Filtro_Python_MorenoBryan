@@ -1,8 +1,8 @@
 import json
 
 
-with open("clientes.json", "r") as outfile:
-    clientes = json.load(outfile)
+with open("clientes.json", "r") as file:
+    clientes = json.load(file)
     
 nuevo_cliente = {}
 
