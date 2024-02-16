@@ -10,6 +10,7 @@
     "direccion": "cra #12 cll#13",
     "estrato": "2",
     "años afiliado": 1,
+    "categoria": "cliente regular",
     "historial de servisios":{
         "01-02-23": "fibra optica", 
         "02-04-22": "plan de 7000"},
@@ -26,6 +27,7 @@
         "direccion": 0,
         "estrato":0,
         "años afiliado": 0,
+        "categoria":"cliente nuevo",
         "historial de servisios":{  },
         "reportes":{    }
     }
